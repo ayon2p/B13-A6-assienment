@@ -3,7 +3,6 @@ import React from 'react';
 import userIcon from '../../assets/user.png';
 import packageIcon from '../../assets/package.png';
 import rocketIcon from '../../assets/rocket.png';
-
 const GetStarted = () => {
     return (
         <section className="py-20 bg-white">
@@ -15,11 +14,7 @@ const GetStarted = () => {
                 <p className="text-gray-500 font-medium mb-16 cursor-pointer">
                     Start using premium digital tools in minutes, not hours.
                 </p>
-
-              
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                 
                     <div className="relative p-10 border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all group">
                         <div className="absolute top-6 right-6 w-10 h-10 bg-[#6366f1] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
                             01

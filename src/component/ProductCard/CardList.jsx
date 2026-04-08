@@ -3,7 +3,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 const CartList = ({ cartItems, setCartItems }) => {
   
-  const totalPrice = cartItems.reduce((acc, item) => {
+  const totalPrice = cartItems?.reduce((acc, item) => {
     const price = typeof item.price === 'string' 
       ? parseFloat(item.price.replace(/[^\d.]/g, '')) 
       : item.price;
@@ -17,7 +17,7 @@ const CartList = ({ cartItems, setCartItems }) => {
 
 
 const handleCheckout = () => {
-    if (cartItems.length > 0) {
+    if (cartItems?.length > 0) {
       setCartItems([]);
       
     
@@ -30,10 +30,10 @@ const handleCheckout = () => {
   
   return (
     <div className="max-w-4xl mx-auto mt-10 border-2 border-blue-400 rounded-3xl p-8 bg-white shadow-lg">
-      <h2 className="text-2xl font-bold mb-6">Your Cart ({cartItems.length})</h2>
+      <h2 className="text-2xl font-bold mb-6">Your Cart ({cartItems?.length || 0})</h2>
       
       <div className="space-y-4">
-        {cartItems.length > 0 ? (
+        {cartItems?.length > 0 ? (
           cartItems.map((item, index) => (
             <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
               <div className="flex items-center gap-4">
@@ -61,7 +61,7 @@ const handleCheckout = () => {
 
       <div className="mt-8 flex justify-between items-center font-bold text-2xl border-t pt-6">
         <span>Total:</span>
-        <span className="text-blue-600">${totalPrice.toFixed(2)}</span>
+        <span className="text-blue-600">${totalPrice?.toFixed(2)}</span>
       </div>
 
       <button 

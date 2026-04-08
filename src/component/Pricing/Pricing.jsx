@@ -76,9 +76,6 @@ const Pricing = () => {
   </div>
 </div>
 
-
-
-
                  <div className="card w-96 bg-base-100 shadow-sm ">
      <div className="card-body">
     <div className="space-y-4">
